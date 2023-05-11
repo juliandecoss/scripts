@@ -1,0 +1,23 @@
+{
+    "type": "record",
+    "namespace": "mx.konfio.auth",
+    "name": "schema_for_poc",
+    "fields": [
+        {
+            "name": "user_id",
+            "type": "int"
+        },
+        {
+            "name": "natural_person_id",
+            "type": "int"
+        },
+        {
+            "name": "enterprise_id",
+            "type": "int"
+        },
+        {
+            "name": "source",
+            "type": "string"
+        }
+    ]
+}

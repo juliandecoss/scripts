@@ -1,0 +1,4 @@
+PyMySQL==0.9.3          # depbot: skip_patch
+csvkit==1.0.6
+boto3==1.18.15
+Faker==8.0.0 

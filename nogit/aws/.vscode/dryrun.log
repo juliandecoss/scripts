@@ -1,0 +1,10 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/intern/projects/nogit/cognito'
+[ ! -d .venv ] && python3 -m venv --copies .venv ||:;
+( \
+		source .venv/bin/activate; \
+		pip install -qU pip; \
+		pip install -r requirements-dev.txt; \
+	)
+make: Leaving directory `/Users/intern/projects/nogit/cognito'
+ 

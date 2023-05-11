@@ -1,0 +1,10 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/intern/Desktop/csv'
+( \
+		if [ ! -d .venv ]; then python3 -m venv --copies .venv; fi; \
+		source .venv/bin/activate; \
+		pip install -qU pip; \
+		pip install -r requirements.txt; \
+	)
+make: Leaving directory `/Users/intern/Desktop/csv'
+ 

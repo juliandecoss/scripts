@@ -1,0 +1,13 @@
+<div id="box-success" class="alert alert-success" role="alert" style="margin: auto;width: 50%;border: 3px solid green;padding: 10px;display:none;">
+    <p style="text-align:center">Centrame</p>
+</div>
+<script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("refreshed_session")) {
+      const announcement = document.getElementById('box-success');
+      announcement.style.display = 'block';
+      setTimeout(() => {
+        announcement.style.display = 'none';
+      }, 3000)
+    }
+  </script>

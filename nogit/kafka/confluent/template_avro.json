@@ -1,0 +1,6 @@
+{
+    "type": "record",
+    "namespace": "mx.konfio.auth",
+    "name": "",
+    "fields": []
+}

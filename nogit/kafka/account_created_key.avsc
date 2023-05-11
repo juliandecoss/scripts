@@ -1,0 +1,11 @@
+{
+    "type": "record",
+    "namespace": "mx.konfio.auth",
+    "name": "account_created_key",
+    "fields": [
+        {
+            "name": "id",
+            "type": "int"
+        }
+    ]
+}

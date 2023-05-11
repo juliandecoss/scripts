@@ -1,0 +1,16 @@
+{
+  "name": "cognito",
+  "version": "1.0.0",
+  "description": "",
+  "main": "associate_token.js",
+  "dependencies": {
+    "@aws-amplify/auth": "^4.1.2",
+    "@aws-sdk/client-cognito-identity-provider": "^3.22.0",
+    "date-and-time": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

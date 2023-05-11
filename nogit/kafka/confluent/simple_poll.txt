@@ -1,0 +1,239 @@
+1
+2
+3
+Tiempo que tomo consumir: 4089
+Key: 6112
+Offset message 0
+Partition 3
+#############################
+Tiempo que tomo consumir: 0
+Key: 7416
+Offset message 1
+Partition 3
+#############################
+Tiempo que tomo consumir: 0
+Key: 7876
+Offset message 2
+Partition 3
+#############################
+Tiempo que tomo consumir: 0
+Key: 7000
+Offset message 3
+Partition 3
+#############################
+Tiempo que tomo consumir: 0
+Key: 1944
+Offset message 4
+Partition 3
+#############################
+Tiempo que tomo consumir: 0
+Key: 1596
+Offset message 5
+Partition 3
+#############################
+Tiempo que tomo consumir: 0
+Key: 7456
+Offset message 6
+Partition 3
+#############################
+Tiempo que tomo consumir: 0
+Key: 2172
+Offset message 0
+Partition 1
+#############################
+Tiempo que tomo consumir: 0
+Key: 9963
+Offset message 1
+Partition 1
+#############################
+Tiempo que tomo consumir: 0
+Key: 6392
+Offset message 2
+Partition 1
+#############################
+Tiempo que tomo consumir: 0
+Key: 6000
+Offset message 3
+Partition 1
+#############################
+Tiempo que tomo consumir: 0
+Key: 2
+Offset message 4
+Partition 1
+#############################
+Tiempo que tomo consumir: 0
+Key: 3
+Offset message 5
+Partition 1
+#############################
+Tiempo que tomo consumir: 0
+Key: 7
+Offset message 6
+Partition 1
+#############################
+Tiempo que tomo consumir: 0
+Key: 8374
+Offset message 0
+Partition 5
+#############################
+Tiempo que tomo consumir: 0
+Key: 578
+Offset message 1
+Partition 5
+#############################
+Tiempo que tomo consumir: 0
+Key: 7641
+Offset message 2
+Partition 5
+#############################
+Tiempo que tomo consumir: 0
+Key: 2395
+Offset message 3
+Partition 5
+#############################
+Tiempo que tomo consumir: 0
+Key: 1210
+Offset message 4
+Partition 5
+#############################
+Tiempo que tomo consumir: 0
+Key: 6208
+Offset message 5
+Partition 5
+#############################
+Tiempo que tomo consumir: 0
+Key: 6
+Offset message 6
+Partition 5
+#############################
+Tiempo que tomo consumir: 0
+Key: 5721
+Offset message 0
+Partition 2
+#############################
+Tiempo que tomo consumir: 0
+Key: 6082
+Offset message 1
+Partition 2
+#############################
+Tiempo que tomo consumir: 0
+Key: 8301
+Offset message 2
+Partition 2
+#############################
+Tiempo que tomo consumir: 0
+Key: 7393
+Offset message 3
+Partition 2
+#############################
+Tiempo que tomo consumir: 0
+Key: 6862
+Offset message 4
+Partition 2
+#############################
+Tiempo que tomo consumir: 0
+Key: 1
+Offset message 5
+Partition 2
+#############################
+Tiempo que tomo consumir: 0
+Key: 5
+Offset message 6
+Partition 2
+#############################
+Tiempo que tomo consumir: 0
+Key: 9031
+Offset message 0
+Partition 0
+#############################
+Tiempo que tomo consumir: 0
+Key: 6863
+Offset message 1
+Partition 0
+#############################
+Tiempo que tomo consumir: 0
+Key: 9152
+Offset message 2
+Partition 0
+#############################
+Tiempo que tomo consumir: 0
+Key: 2832
+Offset message 3
+Partition 0
+#############################
+Tiempo que tomo consumir: 0
+Key: 4
+Offset message 4
+Partition 0
+#############################
+Tiempo que tomo consumir: 0
+Key: 9
+Offset message 5
+Partition 0
+#############################
+Tiempo que tomo consumir: 0
+Key: 10004
+Offset message 0
+Partition 4
+#############################
+Tiempo que tomo consumir: 0
+Key: 10004
+Offset message 1
+Partition 4
+#############################
+Tiempo que tomo consumir: 0
+Key: 10004
+Offset message 2
+Partition 4
+#############################
+Tiempo que tomo consumir: 0
+Key: 9047
+Offset message 3
+Partition 4
+#############################
+Tiempo que tomo consumir: 0
+Key: 317
+Offset message 4
+Partition 4
+#############################
+Tiempo que tomo consumir: 0
+Key: 8906
+Offset message 5
+Partition 4
+#############################
+Tiempo que tomo consumir: 0
+Key: 1161
+Offset message 6
+Partition 4
+#############################
+Tiempo que tomo consumir: 0
+Key: 6156
+Offset message 7
+Partition 4
+#############################
+Tiempo que tomo consumir: 0
+Key: 3386
+Offset message 8
+Partition 4
+#############################
+Tiempo que tomo consumir: 0
+Key: 0
+Offset message 9
+Partition 4
+#############################
+Tiempo que tomo consumir: 0
+Key: 8
+Offset message 10
+Partition 4
+#############################
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Total time is :14140

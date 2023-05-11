@@ -1,0 +1,61 @@
+<style type="text/css">
+    
+.circular{
+    height:100px;
+    width: 100px;
+    position: relative;  
+    border:solid rgb(255, 255, 255) 1px;
+  }
+
+.circular .inner{
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background: #ffffff;
+  border-radius: 100%;
+}
+.circular .number{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index:10;
+  font-size:25px;
+  font-weight:500;
+  color:#4158d0;
+}
+.circular .bar{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(193, 70, 70);
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 20px);
+}
+.circle .bar .progress{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 100px, 100px, -50px);
+  background: #4158d0;
+}
+
+</style>
+<div class="circular">
+    <div class="inner"></div>
+    <div class="number">100ms</div>
+    <div class="circle">
+       <div class="bar left">
+          <div class="progress"></div>
+       </div>
+       <div class="bar right">
+          <div class="progress"></div>
+       </div>
+     </div>
+  </div>
+

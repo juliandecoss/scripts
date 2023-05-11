@@ -1,0 +1,88 @@
+{
+    "type": "record",
+    "namespace": "mx.konfio.auth",
+    "name": "account_created_value",
+    "fields": [
+        {
+            "name": "user_id",
+            "type": "int"
+        },
+        {
+            "name": "natural_person_id",
+            "type": "int"
+        },
+        {
+            "name": "enterprise_id",
+            "type": "int"
+        },
+        {
+            "name": "source",
+            "type": "string"
+        },
+        {
+            "name": "domain",
+            "type": "string"
+        },
+        {
+            "name": "stage",
+            "type": "string"
+        },
+        {
+            "name": "screen",
+            "type": "string"
+        },
+        {
+            "name": "action",
+            "type": "string"
+        },
+        {
+            "name": "email",
+            "type": "string"
+        },
+         {
+            "name": "phone",
+            "type": "string"
+        },
+         {
+            "name": "first_name",
+            "type": "string"
+        },
+         {
+            "name": "last_name",
+            "type": "string"
+        },
+         {
+            "name": "last_name1",
+            "type": "string"
+        },
+         {
+            "name": "last_name2",
+            "type": "string"
+        },
+        {
+            "name": "enterprise_customer_type",
+            "type": "string"
+        },
+        {
+            "name": "utm_source",
+            "type": "string"
+        },
+           {
+            "name": "utm_medium",
+            "type": "string"
+        },
+        {
+            "name": "utm_campaign",
+            "type": "string"
+        },
+        {
+            "name": "utm_term",
+            "type": "string"
+        },
+        {
+            "name": "utm_content",
+            "type": "string"
+        }
+        
+    ]
+}

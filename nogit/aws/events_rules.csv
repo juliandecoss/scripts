@@ -1,0 +1,316 @@
+ACCOUNT_STATEMENT_GEN_CONSUMER_DEV,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/ACCOUNT_STATEMENT_GEN_CONSUMER_DEV,Builds an account statement,DISABLED
+ACCOUNT_STATEMENT_GEN_CONSUMER_PROD,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/ACCOUNT_STATEMENT_GEN_CONSUMER_PROD,Consumes SQS messages for building account statement,DISABLED
+ACCOUNT_STATEMENT_GEN_DEV,rate(1 hour),arn:aws:events:us-west-2:180477243137:rule/ACCOUNT_STATEMENT_GEN_DEV,Gets pending account statements,DISABLED
+ACCOUNT_STATEMENT_GEN_HISTORICAL_BACKUP_DEV,cron(20 04 * * ? *),arn:aws:events:us-west-2:180477243137:rule/ACCOUNT_STATEMENT_GEN_HISTORICAL_BACKUP_DEV,Allows to create historical daily backup for LOAN_LIFETIME table that will be used to create Account Statements. ,DISABLED
+ACCOUNT_STATEMENT_GEN_HISTORICAL_BACKUP_PROD,cron(20 04 * * ? *),arn:aws:events:us-west-2:180477243137:rule/ACCOUNT_STATEMENT_GEN_HISTORICAL_BACKUP_PROD,Allows to create historical daily backup for LOAN_LIFETIME table that will be used to create Account Statements. ,ENABLED
+ACCOUNT_STATEMENT_GEN_LOAN_PERIODS_GENERATION_DEV,rate(8 hours),arn:aws:events:us-west-2:180477243137:rule/ACCOUNT_STATEMENT_GEN_LOAN_PERIODS_GENERATION_DEV,Looks for the loans that have cut off date today and don't have loan periods generated and generates them,DISABLED
+ACCOUNT_STATEMENT_GEN_LOAN_PERIODS_GENERATION_PROD,rate(6 hours),arn:aws:events:us-west-2:180477243137:rule/ACCOUNT_STATEMENT_GEN_LOAN_PERIODS_GENERATION_PROD,Looks for the loans that have cut off date today and don't have loan periods generated and generates them,ENABLED
+ACCOUNT_STATEMENT_GEN_PRODUCE_DEV,cron(0 18/1 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/ACCOUNT_STATEMENT_GEN_PRODUCE_DEV,Gets pending account statements,DISABLED
+ACCOUNT_STATEMENT_GEN_PRODUCE_PROD,cron(0/30 18/1 ? * * *),arn:aws:events:us-west-2:180477243137:rule/ACCOUNT_STATEMENT_GEN_PRODUCE_PROD,Gets pending account statements,DISABLED
+AFFILIATIONS_BANCOMER,cron(30 17 ? * 2-6 *),arn:aws:events:us-west-2:180477243137:rule/AFFILIATIONS_BANCOMER,Run lambda function to generate the affiliations files with Bancomer for loans with status 'V',DISABLED
+AFFILIATIONS_BANORTE,cron(0 7 ? * 2-6 *),arn:aws:events:us-west-2:180477243137:rule/AFFILIATIONS_BANORTE,Run lambda function to generate the affiliations files with Banorte for loans with status 'V',DISABLED
+AFFILIATIONS_BANORTE_DEV,"cron(18 23 ? * 3,5 *)",arn:aws:events:us-west-2:180477243137:rule/AFFILIATIONS_BANORTE_DEV,Event to call banorte_affiliations_DEV lambda specifying which bank file type will must be created,DISABLED
+Amazon_Inspector_Assessment_0-Y4vceC9j_IduVpul,rate(7 days),arn:aws:events:us-west-2:180477243137:rule/Amazon_Inspector_Assessment_0-Y4vceC9j_IduVpul,Scheduled Inspector Assessment for arn:aws:inspector:us-west-2:180477243137:target/0-P5iMiOJR/template/0-Y4vceC9jrunning every 7 day(s),ENABLED
+Amazon_Inspector_Assessment_0-ftdj89Kj_IdacDQC,rate(7 days),arn:aws:events:us-west-2:180477243137:rule/Amazon_Inspector_Assessment_0-ftdj89Kj_IdacDQC,Scheduled Inspector Assessment for arn:aws:inspector:us-west-2:180477243137:target/0-ewfC7Ose/template/0-ftdj89Kjrunning every 7 day(s),ENABLED
+Amazon_Inspector_Assessment_0-nHW8lvpt_Id5cOys,rate(7 days),arn:aws:events:us-west-2:180477243137:rule/Amazon_Inspector_Assessment_0-nHW8lvpt_Id5cOys,Scheduled Inspector Assessment for arn:aws:inspector:us-west-2:180477243137:target/0-ygZgNY4G/template/0-nHW8lvptrunning every 7 day(s),ENABLED
+Amazon_Inspector_Assessment_0-pNQOzD1k_IdQtMW5,rate(7 days),arn:aws:events:us-west-2:180477243137:rule/Amazon_Inspector_Assessment_0-pNQOzD1k_IdQtMW5,Scheduled Inspector Assessment for arn:aws:inspector:us-west-2:180477243137:target/0-oGonQ4G4/template/0-pNQOzD1krunning every 7 day(s),ENABLED
+Audit-of-instances,rate(7 days),arn:aws:events:us-west-2:180477243137:rule/Audit-of-instances,Recurring - Inspector trigger security assessments to run based on an event,ENABLED
+BC,cron(0 2 1 * ? *),arn:aws:events:us-west-2:180477243137:rule/BC,Default,DISABLED
+CALL_LAMBDA_SHORTEST_TIME_NO_PAYLOAD,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/CALL_LAMBDA_SHORTEST_TIME_NO_PAYLOAD,,ENABLED
+CNBV_checker,"cron(10 7,19 ? * * *)",arn:aws:events:us-west-2:180477243137:rule/CNBV_checker,Schedule for sdn_checker_PROD lambda function,DISABLED
+COLLECTION_COMMUNICATION_REMINDERS_MAILING,cron(0 16 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/COLLECTION_COMMUNICATION_REMINDERS_MAILING,Sends collection reminders' mails  ,DISABLED
+COLLECTION_COMMUNICATION_REMINDERS_WHATSAPP,cron(0 16 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/COLLECTION_COMMUNICATION_REMINDERS_WHATSAPP,Sends collection reminders' whatsapps,DISABLED
+CRON_RESOLVE_FX_RATES,cron(0 10 ? * * *),arn:aws:events:us-west-2:180477243137:rule/CRON_RESOLVE_FX_RATES,Daily execution at 13 hrs.,ENABLED
+Collections_checksum_Prod,cron(10 * * * ? *),arn:aws:events:us-west-2:180477243137:rule/Collections_checksum_Prod,Collections_checksum_Prod,DISABLED
+DEV_CALL_search_matches_blacklists,cron(0/30 * ? * MON-SUN *),arn:aws:events:us-west-2:180477243137:rule/DEV_CALL_search_matches_blacklists,"Call the DEV lambda function ""search_matches_blacklists"" every n minutes",DISABLED
+Daily-Attunity-Snapshot,cron(0 7 * * ? *),arn:aws:events:us-west-2:180477243137:rule/Daily-Attunity-Snapshot,Rule of cloudwatch to execute daily snapshot of Attunity PROD instance,ENABLED
+Default,rate(15 minutes),arn:aws:events:us-west-2:180477243137:rule/Default,Trigger the monitors for dev,ENABLED
+EBS-Backup-Rule,cron(0 4 ? * 1 *),arn:aws:events:us-west-2:180477243137:rule/EBS-Backup-Rule,Lambda for Backup EBS - Cron,ENABLED
+EFOS_EDOS,cron(5 0 ? * 1 *),arn:aws:events:us-west-2:180477243137:rule/EFOS_EDOS,Runs efos_edos scraper every Sunday,ENABLED
+EVENT-SCHEDULE-CANCEL-KOMPAS,cron(10 05 * * ? *),arn:aws:events:us-west-2:180477243137:rule/EVENT-SCHEDULE-CANCEL-KOMPAS,Schedule for execute kompas-cancellation-lambda.,ENABLED
+EXCHANGES_RATES_BANXICO,cron(0 8 ? * * *),arn:aws:events:us-west-2:180477243137:rule/EXCHANGES_RATES_BANXICO,Obtain daily exchange rates ,ENABLED
+FACTURAMA_CONSUME,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/FACTURAMA_CONSUME,Invoices a payment,DISABLED
+FACTURAMA_CONSUME_DEV,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/FACTURAMA_CONSUME_DEV,Invoices a payment,DISABLED
+FACTURAMA_PRODUCE,rate(5 hours),arn:aws:events:us-west-2:180477243137:rule/FACTURAMA_PRODUCE,Gets pending invoicing payments,DISABLED
+FACTURAMA_PRODUCE_DEV,rate(5 hours),arn:aws:events:us-west-2:180477243137:rule/FACTURAMA_PRODUCE_DEV,Gets pending invoicing payments,DISABLED
+GET_TOPUP_CANDIDATES,cron(30 21 ? * TUE-SAT *),arn:aws:events:us-west-2:180477243137:rule/GET_TOPUP_CANDIDATES,Get all the clients that paid every day and evaluate if they are candidates,DISABLED
+Guardduty-Events,,arn:aws:events:us-west-2:180477243137:rule/Guardduty-Events,,ENABLED
+INVOICE_DOWNLOADER_CONSUMER_PROD,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/INVOICE_DOWNLOADER_CONSUMER_PROD,Consumes mesages for invoice downloading from SQS in prod environment,ENABLED
+INVOICE_DOWNLOADER_COSUMER_DEV,rate(3 minutes),arn:aws:events:us-west-2:180477243137:rule/INVOICE_DOWNLOADER_COSUMER_DEV,Consumes mesages for invoice downloading from SQS,DISABLED
+INVOICE_DOWNLOADER_DEV,rate(3 hours),arn:aws:events:us-west-2:180477243137:rule/INVOICE_DOWNLOADER_DEV,Produces messages for SQS in prod environment for downloading invoices,DISABLED
+INVOICE_DOWNLOADER_POPULATE_DEV,rate(8 hours),arn:aws:events:us-west-2:180477243137:rule/INVOICE_DOWNLOADER_POPULATE_DEV,Populates CFDI_STORAGE_TABLE in dev environment,ENABLED
+INVOICE_DOWNLOADER_POPULATE_PROD,rate(1 hour),arn:aws:events:us-west-2:180477243137:rule/INVOICE_DOWNLOADER_POPULATE_PROD,Populates CFDI_STORAGE_TABLE in prod environment,ENABLED
+INVOICE_DOWNLOADER_PRODUCE_PROD,rate(3 hours),arn:aws:events:us-west-2:180477243137:rule/INVOICE_DOWNLOADER_PRODUCE_PROD,Produces messages for SQS in prod environment for downloading invoices,ENABLED
+JARVIS_CONSUME_DEV,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/JARVIS_CONSUME_DEV,Invoices a payment,DISABLED
+JARVIS_CONSUME_PROD,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/JARVIS_CONSUME_PROD,Invoices a payment,ENABLED
+JARVIS_PRODUCE_DEV,rate(1 hour),arn:aws:events:us-west-2:180477243137:rule/JARVIS_PRODUCE_DEV,Gets pending invoicing payments,DISABLED
+JARVIS_PRODUCE_PROD,rate(1 hour),arn:aws:events:us-west-2:180477243137:rule/JARVIS_PRODUCE_PROD,Gets pending invoicing payments,ENABLED
+JARVIS_RESTORE_DOCS_PROD,rate(1 hour),arn:aws:events:us-west-2:180477243137:rule/JARVIS_RESTORE_DOCS_PROD,Service that allows to launch reprocessing PDF and XML files to store them at S3 finance-invoicing bucket if an occurs error during the first time.,ENABLED
+LM2_PRODUCER,cron(0 6 * * ? *),arn:aws:events:us-west-2:180477243137:rule/LM2_PRODUCER,"Load all the clients that initiated an application and provided the SAT and BC credentials, and for some reason they abandoned the process",DISABLED
+LM_Reconciliation,rate(10 minutes),arn:aws:events:us-west-2:180477243137:rule/LM_Reconciliation,Get the opens and clicks from all the campaigns generated in the last 3 days,ENABLED
+MOZ_SCRAPER_SCHEDULE,cron(0 10 ? * SAT *),arn:aws:events:us-west-2:180477243137:rule/MOZ_SCRAPER_SCHEDULE,Event that trigger ,ENABLED
+ONGOING_SQS_CONSUMER,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/ONGOING_SQS_CONSUMER,Consumes the Sat ongoing SQS queue,DISABLED
+ONGOING_SQS_CONSUMER_OFF_HOURS,cron(0/1 0-15 ? * * *),arn:aws:events:us-west-2:180477243137:rule/ONGOING_SQS_CONSUMER_OFF_HOURS,SAT ongoing sqs consumer for off hours,DISABLED
+PROD_CALL_search_matches_blacklists,cron(0/30 * ? * MON-SUN *),arn:aws:events:us-west-2:180477243137:rule/PROD_CALL_search_matches_blacklists,"Call the PROD lambda function ""search_matches_blacklists"" every n minutes",ENABLED
+PROD_payroll_SQS_consumer,rate(10 minutes),arn:aws:events:us-west-2:180477243137:rule/PROD_payroll_SQS_consumer,,ENABLED
+QEQ_DEV_CONSUME_SEARCH,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/QEQ_DEV_CONSUME_SEARCH,Executes invocation to QEQ webservice every 1 minute and register the result at DB.,DISABLED
+QEQ_MIRROR_CONSUME_SEARCH,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/QEQ_MIRROR_CONSUME_SEARCH,,DISABLED
+QEQ_MIRROR_PRODUCE_SEARCH,rate(1 hour),arn:aws:events:us-west-2:180477243137:rule/QEQ_MIRROR_PRODUCE_SEARCH,,DISABLED
+QEQ_PROD_CONSUME_REGISTER,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/QEQ_PROD_CONSUME_REGISTER,Executes all pending application id's and process them to be registered at QEQ_ENTITY_SEARCHED table.,DISABLED
+QEQ_PROD_CONSUME_SEARCH,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/QEQ_PROD_CONSUME_SEARCH,Allows to read SQS queue and get messages to be searched with QEQ lambda.,DISABLED
+QEQ_PROD_PRODUCE_REGISTER,rate(5 minutes),arn:aws:events:us-west-2:180477243137:rule/QEQ_PROD_PRODUCE_REGISTER,Allows to search and enqueue to SQS all application id's that not be registered at QEQ_ENTITY_SEARCHED table.,DISABLED
+QEQ_PROD_PRODUCE_SEARCH,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/QEQ_PROD_PRODUCE_SEARCH,Allows to produce and enqueue messages to be searched by QEQ lambda.,DISABLED
+QEQ_SEARCH_SHAREHOLDERS,rate(15 minutes),arn:aws:events:us-west-2:180477243137:rule/QEQ_SEARCH_SHAREHOLDERS,Allows to search and save shareholders (natural_person & application_id) in QEQ_ENTITY_SEARCHED table.,DISABLED
+Reminder_passwords,rate(15 days),arn:aws:events:us-west-2:180477243137:rule/Reminder_passwords,Reminder to security slack channel,DISABLED
+Report.BC,cron(0 22 3 * ? *),arn:aws:events:us-west-2:180477243137:rule/Report.BC,Job that calls the lambda for generate BC report,ENABLED
+Report.CDC-PF,cron(0 18 5 * ? *),arn:aws:events:us-west-2:180477243137:rule/Report.CDC-PF,Job that calls the lambda for generate cdc pm-pfae report,ENABLED
+Report.CDC-PM-PFAE,cron(0 18 3 * ? *),arn:aws:events:us-west-2:180477243137:rule/Report.CDC-PM-PFAE,Job that calls the lambda for generate cdc pf report,ENABLED
+Report.SCOTIA-MONTHLY,cron(0 17 2 * ? *),arn:aws:events:us-west-2:180477243137:rule/Report.SCOTIA-MONTHLY,Job that calls the lambda for generate monthly scotia report,ENABLED
+Report.SCOTIA-WEEKLY,cron(0 17 ? * MON *),arn:aws:events:us-west-2:180477243137:rule/Report.SCOTIA-WEEKLY,Job that calls the lambda for generate weekly scotia report,ENABLED
+RunLambda,cron(47 11 * * ? *),arn:aws:events:us-west-2:180477243137:rule/RunLambda,Call account statement lambda,ENABLED
+SATONGOING,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/SATONGOING,Message generation for ongoing sat,DISABLED
+SAT_ONGOING_BKP,cron(0/1 15-23 ? * * *),arn:aws:events:us-west-2:180477243137:rule/SAT_ONGOING_BKP,Cron to trigger ongoing job,ENABLED
+SCOTIA-MONTHLY,cron(0 17 2 * ? *),arn:aws:events:us-west-2:180477243137:rule/SCOTIA-MONTHLY,Default,DISABLED
+SCOTIA-WEEKLY,cron(0 17 ? * MON *),arn:aws:events:us-west-2:180477243137:rule/SCOTIA-WEEKLY,Default,ENABLED
+SEMRUSH_CRON,cron(0 6 ? * * *),arn:aws:events:us-west-2:180477243137:rule/SEMRUSH_CRON,Daily Report,ENABLED
+SF_Core_Login,rate(3 hours),arn:aws:events:us-west-2:180477243137:rule/SF_Core_Login,Perform a Login to Core API to save the cookie in SF,ENABLED
+SYSTEM_ALERT_ERROR,rate(7 minutes),arn:aws:events:us-west-2:180477243137:rule/SYSTEM_ALERT_ERROR,[Error] System Alert,ENABLED
+SYSTEM_ALERT_LOG,cron(0 7 ? * * *),arn:aws:events:us-west-2:180477243137:rule/SYSTEM_ALERT_LOG,[Log] System Alert,ENABLED
+SYSTEM_ALERT_WARNING,cron(0 14 ? * * *),arn:aws:events:us-west-2:180477243137:rule/SYSTEM_ALERT_WARNING,[Warning] System Alert,ENABLED
+TareaBackPopulationSTPCustomer,cron(0/10 * * * ? *),arn:aws:events:us-west-2:180477243137:rule/TareaBackPopulationSTPCustomer,"Cronjob para correr la lambda encargada de hacer el backpopulate de la tabla KONFIO.STP_CUSTOMER, y llenas los atributos de natural_person_id o company_id.",DISABLED
+Twilio_Inbound_SMS,rate(10 minutes),arn:aws:events:us-west-2:180477243137:rule/Twilio_Inbound_SMS,Get Twilio SMS inbound messages,ENABLED
+affiliation-docs-cards-regular-prod,cron(45 19 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/affiliation-docs-cards-regular-prod,Generate auto-debit files for Cards (Regular),ENABLED
+affiliation-docs-create-lending-regular-orders-prod,cron(30 19 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/affiliation-docs-create-lending-regular-orders-prod,Generate auto-debit orders for Lending regular (BBVA),ENABLED
+affiliation-docs-konfio-pay-prod,cron(21 20 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/affiliation-docs-konfio-pay-prod,Generate auto-debit files for Konfio Pay,DISABLED
+affiliation-docs-lending-irregular-high-amounts-prod,cron(15 20 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/affiliation-docs-lending-irregular-high-amounts-prod,Generate auto-debit files for Lending irregular high amounts (BBVA),DISABLED
+affiliation-docs-lending-irregular-massive-prod,cron(18 20 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/affiliation-docs-lending-irregular-massive-prod,Generate auto-debit files for Lending irregular massive (BBVA),DISABLED
+affiliation-docs-lending-irregular-promises-prod,cron(8 20 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/affiliation-docs-lending-irregular-promises-prod,Generate auto-debit files for Lending irregular payment promises (BBVA),DISABLED
+affiliation-docs-lending-irregular-retries-prod,cron(10 20 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/affiliation-docs-lending-irregular-retries-prod,Generate auto-debit files for Lending irregular payment retries (BBVA),DISABLED
+affiliation-docs-lending-irregular-santander-prod,cron(6 20 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/affiliation-docs-lending-irregular-santander-prod,Generate auto-debit files for Lending irregular (Santander),DISABLED
+affiliation-docs-lending-irregular-special-requests-prod,cron(12 20 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/affiliation-docs-lending-irregular-special-requests-prod,Generate auto-debit files for Lending irregular special requests (BBVA),DISABLED
+affiliation-docs-lending-regular-prod,cron(40 19 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/affiliation-docs-lending-regular-prod,Generate auto-debit files for Lending regular (BBVA),ENABLED
+agreement-status,cron(00 15 * * ? *),arn:aws:events:us-west-2:180477243137:rule/agreement-status,new lambda agreement-status,DISABLED
+application-arco-cron-event-prod,cron(0 9 ? * 7 *),arn:aws:events:us-west-2:180477243137:rule/application-arco-cron-event-prod,Schedule application-arco function,ENABLED
+application-issues-slack-notificator-cron-event-prod,rate(15 minutes),arn:aws:events:us-west-2:180477243137:rule/application-issues-slack-notificator-cron-event-prod,Schedule application-issues-slack-notificator function,ENABLED
+applications-expiration-cron-event-prod,cron(0 11 * * ? *),arn:aws:events:us-west-2:180477243137:rule/applications-expiration-cron-event-prod,Schedule stale_applications_collector function,ENABLED
+automatic-formers,cron(0 2 * * ? *),arn:aws:events:us-west-2:180477243137:rule/automatic-formers,everyday at 20hrs Mexico City,ENABLED
+aws-connect-scraper-scheduler,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/aws-connect-scraper-scheduler,scheduler for aws-connect scraper,DISABLED
+banxico-api-consumer-cron-event-dev,cron(0 16 * * ? *),arn:aws:events:us-west-2:180477243137:rule/banxico-api-consumer-cron-event-dev,Schedule banxico-api-consumer function,ENABLED
+banxico-api-consumer-cron-event-prod,cron(0 16 * * ? *),arn:aws:events:us-west-2:180477243137:rule/banxico-api-consumer-cron-event-prod,Schedule banxico-api-consumer function,ENABLED
+behavior_model,cron(0 5 * * ? *),arn:aws:events:us-west-2:180477243137:rule/behavior_model,,ENABLED
+behavior_model_rule,cron(0 8 * * ? *),arn:aws:events:us-west-2:180477243137:rule/behavior_model_rule,,ENABLED
+benefits-validity-verifier-cron-event-prod,cron(0 6 * * ? *),arn:aws:events:us-west-2:180477243137:rule/benefits-validity-verifier-cron-event-prod,Schedule benefits-validity-verifier function,ENABLED
+bnc-monitor-update-cron-event-dev,cron(0/1 5-10 12 4 ? 2021),arn:aws:events:us-west-2:180477243137:rule/bnc-monitor-update-cron-event-dev,Schedule bnc-monitor-update function,ENABLED
+bnc-monitor-update-cron-event-prod,cron(0/1 6-11 18 * ? *),arn:aws:events:us-west-2:180477243137:rule/bnc-monitor-update-cron-event-prod,Schedule bnc-monitor-update function,ENABLED
+call_agreement_status_dev,cron(0 5 * * ? *),arn:aws:events:us-west-2:180477243137:rule/call_agreement_status_dev,Rull that calls agreement_status_dev each day at 23:00,DISABLED
+call_agreement_status_prod,cron(0 5 * * ? *),arn:aws:events:us-west-2:180477243137:rule/call_agreement_status_prod,call agreement_status_prod each day,DISABLED
+card-applications-to-expire-cron-event-dev,cron(0 0 1 1 ? *),arn:aws:events:us-west-2:180477243137:rule/card-applications-to-expire-cron-event-dev,Schedule card-applications-to-expire function,ENABLED
+card-applications-to-expire-cron-event-prod,cron(0 */1 ? * * *),arn:aws:events:us-west-2:180477243137:rule/card-applications-to-expire-cron-event-prod,Schedule card-applications-to-expire function,ENABLED
+card-contract-mci-first-notification-weekdays-cron-prod,cron(0 1 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/card-contract-mci-first-notification-weekdays-cron-prod,Schedule card-contract-mci-first-notification-weekdays event,ENABLED
+card-contract-mci-first-notification-weekends-cron-prod,cron(0 18 ? * SAT-SUN *),arn:aws:events:us-west-2:180477243137:rule/card-contract-mci-first-notification-weekends-cron-prod,Schedule card-contract-mci-first-notification-weekends event,ENABLED
+card-contract-mci-second-notification-weekdays-cron-prod,cron(0 1 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/card-contract-mci-second-notification-weekdays-cron-prod,Schedule card-contract-mci-second-notification-weekdays event,ENABLED
+card-contract-mci-second-notification-weekends-cron-prod,cron(0 18 ? * SAT-SUN *),arn:aws:events:us-west-2:180477243137:rule/card-contract-mci-second-notification-weekends-cron-prod,Schedule card-contract-mci-second-notification-weekends event,ENABLED
+card-contract-mci-third-notification-weekdays-cron-prod,cron(0 1 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/card-contract-mci-third-notification-weekdays-cron-prod,Schedule card-contract-mci-third-notification-weekdays event,ENABLED
+card-contract-mci-third-notification-weekends-cron-prod,cron(0 18 ? * SAT-SUN *),arn:aws:events:us-west-2:180477243137:rule/card-contract-mci-third-notification-weekends-cron-prod,Schedule card-contract-mci-third-notification-weekends event,ENABLED
+cdc-active-portfolio-poller-cards-cron-event-dev,cron(0 19 25 3 ? 2022),arn:aws:events:us-west-2:180477243137:rule/cdc-active-portfolio-poller-cards-cron-event-dev,Schedule cdc-active-portfolio-poller-cards function in dev,ENABLED
+cdc-active-portfolio-poller-cards-cron-event-prod,cron(0 19 25 3 ? 2022),arn:aws:events:us-west-2:180477243137:rule/cdc-active-portfolio-poller-cards-cron-event-prod,Schedule cdc-active-portfolio-poller-cards function in prod,ENABLED
+cdc-active-portfolio-poller-cards-pm-cron-event-dev,cron(0 19 25 3 ? 2022),arn:aws:events:us-west-2:180477243137:rule/cdc-active-portfolio-poller-cards-pm-cron-event-dev,Schedule cdc-active-portfolio-poller-cards-pm function in dev,ENABLED
+cdc-active-portfolio-poller-cards-pm-cron-event-prod,cron(0 19 25 3 ? 2022),arn:aws:events:us-west-2:180477243137:rule/cdc-active-portfolio-poller-cards-pm-cron-event-prod,Schedule cdc-active-portfolio-poller-cards-pm function in prod,ENABLED
+cdc-active-portfolio-poller-cron-event-dev,cron(0 17 25 3 ? 2022),arn:aws:events:us-west-2:180477243137:rule/cdc-active-portfolio-poller-cron-event-dev,Schedule cdc-active-portfolio-poller function in dev,ENABLED
+cdc-active-portfolio-poller-cron-event-prod,cron(0 5 17 * ? *),arn:aws:events:us-west-2:180477243137:rule/cdc-active-portfolio-poller-cron-event-prod,Schedule cdc-active-portfolio-poller function,ENABLED
+cdc-active-portfolio-poller-cron-event-prod-monitor-bnc,cron(0 5 18 * ? *),arn:aws:events:us-west-2:180477243137:rule/cdc-active-portfolio-poller-cron-event-prod-monitor-bnc,Schedule cdc-active-portfolio-poller function,ENABLED
+cdc-active-portfolio-poller-cron-event-prod-renueva,cron(0 5 17 * ? *),arn:aws:events:us-west-2:180477243137:rule/cdc-active-portfolio-poller-cron-event-prod-renueva,Schedule cdc-active-portfolio-poller function,ENABLED
+cdc-monitor-update-cron-event-dev,cron(0/1 6-11 12 3 ? 2021),arn:aws:events:us-west-2:180477243137:rule/cdc-monitor-update-cron-event-dev,Schedule cdc-monitor-update function,ENABLED
+cdc-monitor-update-cron-event-prod,cron(0/1 6-11 17 * ? *),arn:aws:events:us-west-2:180477243137:rule/cdc-monitor-update-cron-event-prod,Schedule cdc-monitor-update function,ENABLED
+cdc-renueva-update-cron-event-dev,cron(0/1 6-11 23 3 ? 2021),arn:aws:events:us-west-2:180477243137:rule/cdc-renueva-update-cron-event-dev,Schedule cdc-renueva-update function,ENABLED
+cdc-renueva-update-cron-event-prod,cron(0/1 6-11 17 * ? *),arn:aws:events:us-west-2:180477243137:rule/cdc-renueva-update-cron-event-prod,Schedule cdc-renueva-update function,ENABLED
+cdc-reports-dev-CdcDashreportsDashNVEventsRuleSche-UOHPKRVT5PJ4,"cron(0 12 5,20 * ? *)",arn:aws:events:us-west-2:180477243137:rule/cdc-reports-dev-CdcDashreportsDashNVEventsRuleSche-UOHPKRVT5PJ4,,ENABLED
+check-alive-server-cron-event-prod,rate(5 minutes),arn:aws:events:us-west-2:180477243137:rule/check-alive-server-cron-event-prod,Schedule check-alive-server function,ENABLED
+check-payment-register-docs-cron-event-prod,cron(0/1 13-20 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/check-payment-register-docs-cron-event-prod,Schedule check-payment-register-docs function,ENABLED
+cld-scheduler-event-dev,cron(0 8 16 * ? *),arn:aws:events:us-west-2:180477243137:rule/cld-scheduler-event-dev,Tarea programa los primeros dias de cada mes,ENABLED
+collection-products-execute-every-hour-prod,cron(0 * ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/collection-products-execute-every-hour-prod,Execute collections products payment check every hour from Mon-Fri,ENABLED
+collections-cards-processor-cron-event-prod,"cron(0 21 ? * MON,TUE,WED,THU,FRI *)",arn:aws:events:us-west-2:180477243137:rule/collections-cards-processor-cron-event-prod,Schedule collections-cards-processor function,ENABLED
+collections-cards-processor-report-cron-event-prod,"cron(0 23 ? * MON,TUE,WED,THU,FRI *)",arn:aws:events:us-west-2:180477243137:rule/collections-cards-processor-report-cron-event-prod,Schedule collections-cards-processor consolidated report function,ENABLED
+collections-model-comms-cron-event-orq-mode-prod,cron(15 22 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/collections-model-comms-cron-event-orq-mode-prod,Schedule collections-model-comms active SQS for trigger the next PAYLOADS,ENABLED
+collections-model-cron-event-orq-mode-prod,cron(00 22 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/collections-model-cron-event-orq-mode-prod,Schedule to PUSH payloads into SQS,ENABLED
+collections-product-payments-execute-every-hour-prod,cron(0 * ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/collections-product-payments-execute-every-hour-prod,Execute collections products payment check every hour from Mon-Fri,ENABLED
+comms-bulk-producer-reporting-weekly-monday-cron-dev,cron(0 16 ? * MON 2199),arn:aws:events:us-west-2:180477243137:rule/comms-bulk-producer-reporting-weekly-monday-cron-dev,Schedule comms-bulk-producer function for reporting_weekly_monday event,ENABLED
+comms-bulk-producer-reporting-weekly-monday-cron-prod,cron(0 16 ? * MON *),arn:aws:events:us-west-2:180477243137:rule/comms-bulk-producer-reporting-weekly-monday-cron-prod,Schedule comms-bulk-producer function for reporting_weekly_monday event,ENABLED
+comms-bulk-producer-reporting-weekly-wednesday-cron-dev,cron(0 16 ? * WED 2199),arn:aws:events:us-west-2:180477243137:rule/comms-bulk-producer-reporting-weekly-wednesday-cron-dev,Schedule comms-bulk-producer function for reporting_weekly_wednesday event,ENABLED
+comms-bulk-producer-reporting-weekly-wednesday-cron-prod,cron(0 16 ? * WED *),arn:aws:events:us-west-2:180477243137:rule/comms-bulk-producer-reporting-weekly-wednesday-cron-prod,Schedule comms-bulk-producer function for reporting_weekly_wednesday event,ENABLED
+comms-scheduled-batch-cron-event-dev,cron(0 14 * * ? 2199),arn:aws:events:us-west-2:180477243137:rule/comms-scheduled-batch-cron-event-dev,Schedule comms-scheduled-batch function,ENABLED
+comms-scheduled-batch-cron-event-prod,cron(0 14 * * ? *),arn:aws:events:us-west-2:180477243137:rule/comms-scheduled-batch-cron-event-prod,Schedule comms-scheduled-batch function,ENABLED
+compliance-ofac-pep-enqueue-search,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/compliance-ofac-pep-enqueue-search,Allows to enqueue messages to be searched in WCO.,ENABLED
+compliance-ofac-pep-produce,rate(5 minutes),arn:aws:events:us-west-2:180477243137:rule/compliance-ofac-pep-produce,Allows to search and enqueue to SQS all application id's that not be registered at QEQ_ENTITY_SEARCHED table.,ENABLED
+compliance-ofac-pep-produce-shareholders,rate(15 minutes),arn:aws:events:us-west-2:180477243137:rule/compliance-ofac-pep-produce-shareholders,Allows to search and save shareholders (natural_person & application_id) in QEQ_ENTITY_SEARCHED table,ENABLED
+compliance-ofac-pep-register-search,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/compliance-ofac-pep-register-search,Get application id's from SQS and registered them in QEQ_ENTITY_SEARCHED table.,ENABLED
+compliance-ofac-pep-search,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/compliance-ofac-pep-search,Get messages from SQS to search them in WCO.,ENABLED
+contract-offer-expiration-producer-cron-event-dev,cron(09 00 * * ? *),arn:aws:events:us-west-2:180477243137:rule/contract-offer-expiration-producer-cron-event-dev,Schedule contract-offer-expiration-producer function,ENABLED
+contract-offer-expiration-producer-cron-event-prod,cron(06 00 * * ? *),arn:aws:events:us-west-2:180477243137:rule/contract-offer-expiration-producer-cron-event-prod,Schedule contract-offer-expiration-producer function,ENABLED
+covenant-watcher-monday-check-prod,cron(0 11 ? * MON *),arn:aws:events:us-west-2:180477243137:rule/covenant-watcher-monday-check-prod,Monday check of covenant status at 6:00 AM (Mexico City Time),ENABLED
+covenant-watcher-month-end-check-dev,cron(0 11 L-5 * ? *),arn:aws:events:us-west-2:180477243137:rule/covenant-watcher-month-end-check-dev,Check of covenant status five days before month end at 6:00 AM (Mexico City Time),DISABLED
+covenant-watcher-month-end-check-prod,cron(0 11 L-5 * ? *),arn:aws:events:us-west-2:180477243137:rule/covenant-watcher-month-end-check-prod,Check of covenant status five days before month end at 6:00 AM (Mexico City Time),ENABLED
+cp-notification-exec-every-day-prod,cron(0 19 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/cp-notification-exec-every-day-prod,Execute collections products notifications every day from Mon-Fri at 1pm,ENABLED
+cp-processor-exec-every-hour-prod,"cron(0 0-1,16-23 ? * MON-FRI *)",arn:aws:events:us-west-2:180477243137:rule/cp-processor-exec-every-hour-prod,Execute collections products processor check every hour from Mon-Fri from 11am to 8pm,ENABLED
+cp-processor-exec-loan-every-hour-prod,"cron(0 0-1,16-23 ? * MON-FRI *)",arn:aws:events:us-west-2:180477243137:rule/cp-processor-exec-loan-every-hour-prod,Execute collections Loan products processor check every hour from Mon-Fri from 11am to 8pm,ENABLED
+cross-sell-trigger-schedule-switcher-disabler-cron-event-dev,cron(0 12 1 1 ? 2022),arn:aws:events:us-west-2:180477243137:rule/cross-sell-trigger-schedule-switcher-disabler-cron-event-dev,Schedule rem-trigger-schedule-switcher function to disable Cross Sell offers trigger,ENABLED
+cross-sell-trigger-schedule-switcher-disabler-cron-event-prod,cron(0 0 ? * TUE-SAT *),arn:aws:events:us-west-2:180477243137:rule/cross-sell-trigger-schedule-switcher-disabler-cron-event-prod,Schedule rem-trigger-schedule-switcher function to disable Cross Sell offers trigger,ENABLED
+cross-sell-trigger-schedule-switcher-enabler-cron-event-dev,cron(0 12 1 1 ? 2022),arn:aws:events:us-west-2:180477243137:rule/cross-sell-trigger-schedule-switcher-enabler-cron-event-dev,Schedule rem-trigger-schedule-switcher function to enable Cross Sell offers trigger,ENABLED
+cross-sell-trigger-schedule-switcher-enabler-cron-event-prod,cron(0 15 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/cross-sell-trigger-schedule-switcher-enabler-cron-event-prod,Schedule rem-trigger-schedule-switcher function to enable Cross Sell offers trigger,ENABLED
+dci-portfolio-features,cron(05 11 * * ? *),arn:aws:events:us-west-2:180477243137:rule/dci-portfolio-features,execute lambda for get features DS 6am every day,ENABLED
+dci-portfolio-features-new-schedule,cron(00 11 * * ? *),arn:aws:events:us-west-2:180477243137:rule/dci-portfolio-features-new-schedule,execute lambda for get features DS 6am every day,ENABLED
+dci-wc-cards-clients-code-cron-event-dev,cron(0 20 ? * SAT *),arn:aws:events:us-west-2:180477243137:rule/dci-wc-cards-clients-code-cron-event-dev,Schedule dci-wc-cards-clients-code function,ENABLED
+dci-wc-cards-clients-v2-cron-event-dev,cron(0 9 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/dci-wc-cards-clients-v2-cron-event-dev,Schedule dci-wc-cards-clients-v2 function,ENABLED
+dev_sat_ongoing_dlq_consumer,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/dev_sat_ongoing_dlq_consumer,This will trigger the lambda that consumes the sat ongoing DLQ,ENABLED
+dictfileszip-cron-event-prod,cron(0/10 * * * ? *),arn:aws:events:us-west-2:180477243137:rule/dictfileszip-cron-event-prod,Schedule dictfileszip function,ENABLED
+dm-former-cron-event-prod,cron(0 7 ? * 2#1 *),arn:aws:events:us-west-2:180477243137:rule/dm-former-cron-event-prod,Schedule dm-former-start function,ENABLED
+dm-gob-condusef-credito-simple-cron-event-prod,cron(0/0 6 1 * ? *),arn:aws:events:us-west-2:180477243137:rule/dm-gob-condusef-credito-simple-cron-event-prod,Schedule dm-gob-condusef-credito-simple-filler function,ENABLED
+dm-gob-condusef-factoraje-financiero-cron-event-prod,cron(0/0 6 1 * ? *),arn:aws:events:us-west-2:180477243137:rule/dm-gob-condusef-factoraje-financiero-cron-event-prod,Schedule dm-gob-condusef-factoraje-financiero-filler function,ENABLED
+dm-gob-condusef-micro-credito-cron-event-prod,cron(0/0 6 1 * ? *),arn:aws:events:us-west-2:180477243137:rule/dm-gob-condusef-micro-credito-cron-event-prod,Schedule dm-gob-condusef-micro-credito-filler function,ENABLED
+dm-gob-condusef-tarjeta-cron-event-prod,cron(0/0 6 1 * ? *),arn:aws:events:us-west-2:180477243137:rule/dm-gob-condusef-tarjeta-cron-event-prod,Schedule dm-gob-condusef-tarjeta-de-credito-filler function,ENABLED
+dm-gob-reus-scraper-cron-event-prod,cron(0 4 ? * * *),arn:aws:events:us-west-2:180477243137:rule/dm-gob-reus-scraper-cron-event-prod,Schedule dm-gob-reus-scraper function every day at 22:00 utc-6,ENABLED
+dm-gr-captcha-breaker-trigger-cron-event-prod,cron(0/5 * * * ? *),arn:aws:events:us-west-2:180477243137:rule/dm-gr-captcha-breaker-trigger-cron-event-prod,Schedule dm-gr-captcha-breaker-trigger-cron function,ENABLED
+dm-gr-cfe-cron-event-prod,rate(1 hour),arn:aws:events:us-west-2:180477243137:rule/dm-gr-cfe-cron-event-prod,Schedule dm-gr-cfe function,ENABLED
+dm-rescoring-poller-cron-event-prod,cron(0/5 * * * ? *),arn:aws:events:us-west-2:180477243137:rule/dm-rescoring-poller-cron-event-prod,Schedule dm_sat_rescoring_poller function,DISABLED
+dm-rescoring-processed-cron-event-prod,cron(00 06 ? * * *),arn:aws:events:us-west-2:180477243137:rule/dm-rescoring-processed-cron-event-prod,Schedule dm_sat_rescoring_processed function,ENABLED
+dm-sat-cfdi-circuit-breaker-sqs-consumer-cron-event-prod,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/dm-sat-cfdi-circuit-breaker-sqs-consumer-cron-event-prod,Schedule dm-sat-cfdi-list-scraper function,ENABLED
+dm-sat-cfdi-ongoing-consumer-off-hours-cron-event-prod,cron(0/1 0-14 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/dm-sat-cfdi-ongoing-consumer-off-hours-cron-event-prod,Schedule dm_sat_cfdi_ongoing_consumer function,ENABLED
+dm-sat-cfdi-ongoing-consumer-on-hours-cron-event-prod,cron(0/1 15-23 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/dm-sat-cfdi-ongoing-consumer-on-hours-cron-event-prod,Schedule dm_sat_cfdi_ongoing_consumer function,ENABLED
+dm-sat-cfdi-ongoing-consumer-weekend-off-hours-cron-event-prod,"cron(0/1 0-14 ? * SAT,SUN *)",arn:aws:events:us-west-2:180477243137:rule/dm-sat-cfdi-ongoing-consumer-weekend-off-hours-cron-event-prod,Schedule dm_sat_cfdi_ongoing_consumer function,ENABLED
+dm-sat-cfdi-ongoing-consumer-weekend-on-hours-cron-event-prod,"cron(0/1 15-23 ? * SAT,SUN *)",arn:aws:events:us-west-2:180477243137:rule/dm-sat-cfdi-ongoing-consumer-weekend-on-hours-cron-event-prod,Schedule dm_sat_cfdi_ongoing_consumer function,ENABLED
+dm-sat-cfdi-ongoing-filler-cron-event-prod,cron(0 0/6 * * ? *),arn:aws:events:us-west-2:180477243137:rule/dm-sat-cfdi-ongoing-filler-cron-event-prod,Schedule dm_sat_cfdi_ongoing_fill_queue function,ENABLED
+dm-sat-cfdi-ongoing-meta-consumer-off-hours-cron-event-prod,cron(0/1 0-14 ? * * *),arn:aws:events:us-west-2:180477243137:rule/dm-sat-cfdi-ongoing-meta-consumer-off-hours-cron-event-prod,Schedule dm_sat_cfdi_ongoing_meta_consumer function,ENABLED
+dm-sat-cfdi-ongoing-meta-consumer-on-hours-cron-event-prod,cron(0/1 15-23 ? * * *),arn:aws:events:us-west-2:180477243137:rule/dm-sat-cfdi-ongoing-meta-consumer-on-hours-cron-event-prod,Schedule dm_sat_cfdi_ongoing_meta_consumer function,ENABLED
+dm-sat-cfdi-ongoing-meta-filler-cron-event-prod,cron(0 0/6 * * ? *),arn:aws:events:us-west-2:180477243137:rule/dm-sat-cfdi-ongoing-meta-filler-cron-event-prod,Schedule dm_sat_cfdi_ongoing_meta_fill_queue function,ENABLED
+dm-sat-cfdi-pdf-generator-cron-event-prod,cron(0/10 * * * ? *),arn:aws:events:us-west-2:180477243137:rule/dm-sat-cfdi-pdf-generator-cron-event-prod,Schedule dm-sat-cfdi-pdf-generator function,ENABLED
+dm-sat-failed-process-retrier-cron-event-dev,cron(0 0 1 1 ? 1970),arn:aws:events:us-west-2:180477243137:rule/dm-sat-failed-process-retrier-cron-event-dev,Schedule dm-sat-failed-process-retrier function,ENABLED
+dm-sat-failed-process-retrier-cron-event-prod,cron(0/10 * * * ? *),arn:aws:events:us-west-2:180477243137:rule/dm-sat-failed-process-retrier-cron-event-prod,Schedule dm-sat-failed-process-retrier function,ENABLED
+dm-sat-monitors-cron-event-week-prod,"cron(0/1 13-23,0-5 ? * MON-FRI *)",arn:aws:events:us-west-2:180477243137:rule/dm-sat-monitors-cron-event-week-prod,Rule that trigger redis monitor to check the status of SAT services on week,ENABLED
+dm-sat-monitors-cron-event-weekend-prod,"cron(0/30 13-23,0-5 ? * SAT-SUN *)",arn:aws:events:us-west-2:180477243137:rule/dm-sat-monitors-cron-event-weekend-prod,Rule that trigger redis monitor to check the status of SAT services on weekend,ENABLED
+dm_dev_get_payroll_event,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/dm_dev_get_payroll_event,SAT Credentials migration,ENABLED
+dm_dev_monitor_d32,rate(1 hour),arn:aws:events:us-west-2:180477243137:rule/dm_dev_monitor_d32,Trigger the d32 monitor for dev,ENABLED
+dm_dev_monitor_idc,rate(5 minutes),arn:aws:events:us-west-2:180477243137:rule/dm_dev_monitor_idc,,ENABLED
+dm_dlq_bp_trigger,cron(0/10 3-5 * * ? *),arn:aws:events:us-west-2:180477243137:rule/dm_dlq_bp_trigger,"Triggers ""dm_<service>_dlq_handler:BACK_POPULATION"" every day from 3:00 AM to 5:00 AM every 10 minutes.",ENABLED
+dm_dlq_trigger,cron(0/10 * * * ? *),arn:aws:events:us-west-2:180477243137:rule/dm_dlq_trigger,"Triggers ""dm_<service>_dlq_handler:PROD"" Lambdas every 10 minutes.",ENABLED
+dm_ongoing_validate_credentials,rate(3 minutes),arn:aws:events:us-west-2:180477243137:rule/dm_ongoing_validate_credentials,,DISABLED
+dm_prod_cfdi_circuit_breaker_scheduler,rate(5 minutes),arn:aws:events:us-west-2:180477243137:rule/dm_prod_cfdi_circuit_breaker_scheduler,,ENABLED
+dm_prod_get_payroll,cron(0 2 ? * * *),arn:aws:events:us-west-2:180477243137:rule/dm_prod_get_payroll,,ENABLED
+dm_prod_payroll_backpopulation,rate(5 minutes),arn:aws:events:us-west-2:180477243137:rule/dm_prod_payroll_backpopulation,,ENABLED
+dm_sat_failed_users_retrier,cron(0 * * * ? *),arn:aws:events:us-west-2:180477243137:rule/dm_sat_failed_users_retrier,Triggers retry Lambda for incomplete users.,ENABLED
+dm_sat_payments_bkp,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/dm_sat_payments_bkp,,ENABLED
+erms-notifications,cron(00 13 * * ? *),arn:aws:events:us-west-2:180477243137:rule/erms-notifications,every day at 7:00 am notification erms,DISABLED
+every_2_minutes_offline,rate(2 minutes),arn:aws:events:us-west-2:180477243137:rule/every_2_minutes_offline,,DISABLED
+execute_account_statement_lambda_dev,cron(20 15 18 12 ? 2017),arn:aws:events:us-west-2:180477243137:rule/execute_account_statement_lambda_dev,Execute account statement lambda dev,DISABLED
+execute_generate_payments_report,cron(30 21 ? * TUE-SAT *),arn:aws:events:us-west-2:180477243137:rule/execute_generate_payments_report,,ENABLED
+expire-offers-cron-event-prod,cron(0 6 * * ? *),arn:aws:events:us-west-2:180477243137:rule/expire-offers-cron-event-prod,Schedule expire-offers function,ENABLED
+expire_application_lending,cron(0 11 14 06 ? 2022),arn:aws:events:us-west-2:180477243137:rule/expire_application_lending,Applications not finalized,ENABLED
+facturacion-cancellation-producer-cron-event-prod,cron(36 0/1 * * ? *),arn:aws:events:us-west-2:180477243137:rule/facturacion-cancellation-producer-cron-event-prod,Produce for cancellation invoices,ENABLED
+facturacion-capital-credit-note-producer-cron-event-prod,cron(48 0/1 * * ? *),arn:aws:events:us-west-2:180477243137:rule/facturacion-capital-credit-note-producer-cron-event-prod,Produce for capital credit note invoices,ENABLED
+facturacion-cards-producer-cron-event-prod,cron(0 0/24 * * ? *),arn:aws:events:us-west-2:180477243137:rule/facturacion-cards-producer-cron-event-prod,Produce for cards invoices,DISABLED
+facturacion-extra-payment-producer-cron-event-prod,cron(24 12 ? * * *),arn:aws:events:us-west-2:180477243137:rule/facturacion-extra-payment-producer-cron-event-prod,Produce for extra payment invoices,ENABLED
+facturacion-income-producer-cron-event-prod,cron(6 0/10 * * ? *),arn:aws:events:us-west-2:180477243137:rule/facturacion-income-producer-cron-event-prod,Produce for income invoices,ENABLED
+facturacion-initial-payment-producer-cron-event-prod,cron(0 0/3 * * ? *),arn:aws:events:us-west-2:180477243137:rule/facturacion-initial-payment-producer-cron-event-prod,Produce for income invoices,ENABLED
+facturacion-onsite-payments-producer-cron-event-prod,cron(12 0/16 * * ? *),arn:aws:events:us-west-2:180477243137:rule/facturacion-onsite-payments-producer-cron-event-prod,Produce for onsite payments invoices,ENABLED
+facturacion-pre-payments-producer-cron-event-prod,cron(18 0/8 * * ? *),arn:aws:events:us-west-2:180477243137:rule/facturacion-pre-payments-producer-cron-event-prod,Produce for pre payments invoices,ENABLED
+facturacion-reimbursement-credit-note-producer-cron-event-prod,cron(30 0/5 * * ? *),arn:aws:events:us-west-2:180477243137:rule/facturacion-reimbursement-credit-note-producer-cron-event-prod,Produce for reimbursement credit note invoices,ENABLED
+finance-jarvis-invoicing-consume-event-dev,cron(0 13 1 1 ? *),arn:aws:events:us-west-2:180477243137:rule/finance-jarvis-invoicing-consume-event-dev,Get message from SQS to create the invoice,ENABLED
+finance-jarvis-invoicing-consume-event-prod,rate(2 minutes),arn:aws:events:us-west-2:180477243137:rule/finance-jarvis-invoicing-consume-event-prod,Get message from SQS to create the invoice,ENABLED
+finance-jarvis-invoicing-produce-event-dev,cron(0 13 1 1 ? *),arn:aws:events:us-west-2:180477243137:rule/finance-jarvis-invoicing-produce-event-dev,Gets pending invoicing payments to create message in SQS,ENABLED
+finance-jarvis-invoicing-produce-event-prod,rate(2 hours),arn:aws:events:us-west-2:180477243137:rule/finance-jarvis-invoicing-produce-event-prod,Gets pending invoicing payments to create message in SQS,ENABLED
+finance-jarvis-invoicing-restore-event-dev,cron(0 13 1 1 ? *),arn:aws:events:us-west-2:180477243137:rule/finance-jarvis-invoicing-restore-event-dev, Service that allows to launch reprocessing PDF and XML files to store them at S3 finance-invoicing bucket if an occurs error during the first time.,ENABLED
+finance-jarvis-invoicing-restore-event-prod,rate(3 hours),arn:aws:events:us-west-2:180477243137:rule/finance-jarvis-invoicing-restore-event-prod, Service that allows to launch reprocessing PDF and XML files to store them at S3 finance-invoicing bucket if an occurs error during the first time.,ENABLED
+finance-loan-statements-cron-event-produce-kopay-prod,cron(0 17/3 ? * * *),arn:aws:events:us-west-2:180477243137:rule/finance-loan-statements-cron-event-produce-kopay-prod,Gets pending payment plans account statements and send message to SQS,ENABLED
+finance-loan-statements-cron-event-produce-prod,cron(0 17/2 ? * * *),arn:aws:events:us-west-2:180477243137:rule/finance-loan-statements-cron-event-produce-prod,Gets pending loan account statements and send message to SQS,ENABLED
+finance-prod-doc-endorsement-cron-event,cron(0 10 ? * * *),arn:aws:events:us-west-2:180477243137:rule/finance-prod-doc-endorsement-cron-event,Check pending documents for goldman sachs and working capital,ENABLED
+finance_document_builder_consume_trigger_prod,cron(0/2 * ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/finance_document_builder_consume_trigger_prod,"Rule to execute consume method from document-builder function, this operation is in charge of create different kind of documents",ENABLED
+finance_document_builder_cron_produce-prod,cron(30 11 ? * * *),arn:aws:events:us-west-2:180477243137:rule/finance_document_builder_cron_produce-prod,Schedule finance_document_builder function to produce(create sqs meesage) cards statements,DISABLED
+finance_document_builder_temp_cron_consume-prod,cron(0/1 * ? * * *),arn:aws:events:us-west-2:180477243137:rule/finance_document_builder_temp_cron_consume-prod,Schedule finance_document_builder function to consume sqs messages from the temporal queue,ENABLED
+finance_fx_rates-cron-event-prod,cron(0 9 ? * * *),arn:aws:events:us-west-2:180477243137:rule/finance_fx_rates-cron-event-prod,Schedule finance_fx_rates function,ENABLED
+finops-core-dispatcher-sni-daily-report-cron-event-prod,cron(0 22 ? * MON-SUN *),arn:aws:events:us-west-2:180477243137:rule/finops-core-dispatcher-sni-daily-report-cron-event-prod,Schedule finops-core-dispatcher sni-report action,ENABLED
+gitlab_backup,cron(0 7 * * ? *),arn:aws:events:us-west-2:180477243137:rule/gitlab_backup,Ejecuta el backup de gitlab todos los dias en la madrugada,ENABLED
+guardduty,,arn:aws:events:us-west-2:180477243137:rule/guardduty,guardduty,ENABLED
+k-notifications-cron-event-prod,"cron(0 16 ? * MON,TUE,WED,THU,FRI *)",arn:aws:events:us-west-2:180477243137:rule/k-notifications-cron-event-prod,Schedule k-notifications function MON-FRI ,ENABLED
+kanto_email_performance,cron(0 13 ? * MON *),arn:aws:events:us-west-2:180477243137:rule/kanto_email_performance,Send email with the information of logs in the last 7 days,ENABLED
+konfio-checksum-system-alert-error-prod,rate(7 minutes),arn:aws:events:us-west-2:180477243137:rule/konfio-checksum-system-alert-error-prod,Schedule konfio-checksum function for system alert error,ENABLED
+konfio-checksum-system-alert-log-prod,cron(0 7 ? * * *),arn:aws:events:us-west-2:180477243137:rule/konfio-checksum-system-alert-log-prod,Schedule konfio-checksum function for system alert log,ENABLED
+konfio-checksum-system-alert-warning-prod,cron(0 14 ? * * *),arn:aws:events:us-west-2:180477243137:rule/konfio-checksum-system-alert-warning-prod,Schedule konfio-checksum function for system alert warning,ENABLED
+konfio-pay-get-payment-plans-cron-event-dev,cron(0 17 * * ? *),arn:aws:events:us-west-2:180477243137:rule/konfio-pay-get-payment-plans-cron-event-dev,Invoke get payment plans lambda every day at 12:00 h Mexico City timezone,ENABLED
+konfio-pay-get-payment-plans-cron-event-prod,cron(0 17 * * ? *),arn:aws:events:us-west-2:180477243137:rule/konfio-pay-get-payment-plans-cron-event-prod,Invoke get payment plans lambda every day at 12:00 h Mexico City timezone,ENABLED
+konfio-pay-process-default-cron-event-dev,cron(0 8 * * ? *),arn:aws:events:us-west-2:180477243137:rule/konfio-pay-process-default-cron-event-dev,Invoke proces default lambda every day at 3:00 h Mexico City timezone,ENABLED
+konfio-pay-process-default-cron-event-prod,cron(0 8 * * ? *),arn:aws:events:us-west-2:180477243137:rule/konfio-pay-process-default-cron-event-prod,Invoke proces default lambda every day at 3:00 h Mexico City timezone,ENABLED
+lambda-kompas-kts-email-1-KompasDashktsDashdbEvent-OM9V3ZZOKTVM,cron(0 14 ? * MON *),arn:aws:events:us-west-2:180477243137:rule/lambda-kompas-kts-email-1-KompasDashktsDashdbEvent-OM9V3ZZOKTVM,,ENABLED
+lambda-minsait-files-movement,cron(0 8 * * ? *),arn:aws:events:us-west-2:180477243137:rule/lambda-minsait-files-movement,Moves and process all minsait files,DISABLED
+lambda-monitorea-get-file-MonitoreaDashgetDashfile-1JE1JR0KOW5JX,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/lambda-monitorea-get-file-MonitoreaDashgetDashfile-1JE1JR0KOW5JX,,ENABLED
+mci-cron-event-prod,cron(30 12 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/mci-cron-event-prod,Schedule mci-job function,ENABLED
+mci-program-scheduler-event-prod,cron(0 4 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/mci-program-scheduler-event-prod,Schedule mci-program-scheduler function,ENABLED
+mifiel-notifier-cron-event-prod,cron(0 0/6 1/1 * ? *),arn:aws:events:us-west-2:180477243137:rule/mifiel-notifier-cron-event-prod,Invoke my lambda every 6 hours each day,ENABLED
+model_behavioral_collections,cron(0 14 * * ? *),arn:aws:events:us-west-2:180477243137:rule/model_behavioral_collections,,ENABLED
+mylambda-cron-event-dev,cron(0 8 13 * ? *),arn:aws:events:us-west-2:180477243137:rule/mylambda-cron-event-dev,Invoke my lambada every one hour,ENABLED
+mylambda-cron-event-prod,cron(0 8 13 * ? *),arn:aws:events:us-west-2:180477243137:rule/mylambda-cron-event-prod,Invoke my lambada every one hour,ENABLED
+news-sentiment-index-model,cron(30 13 * * ? *),arn:aws:events:us-west-2:180477243137:rule/news-sentiment-index-model,execute lambda news-sentiment-index-model every day at 8:30am,ENABLED
+news-sentiment-index-scraping,cron(0 13 * * ? *),arn:aws:events:us-west-2:180477243137:rule/news-sentiment-index-scraping,execute lambda news-sentiment-index-scraping every day at 8am,ENABLED
+origination_model_cards_data_quality,cron(0 10 ? * MON *),arn:aws:events:us-west-2:180477243137:rule/origination_model_cards_data_quality,Fires a Data Quality Job every week,ENABLED
+origination_model_cards_explainability_quality,cron(0 10 ? * MON *),arn:aws:events:us-west-2:180477243137:rule/origination_model_cards_explainability_quality,Triggers Explainability Quality Monitoring Job every week,ENABLED
+origination_model_cards_model_quality,cron(0 10 1 * ? *),arn:aws:events:us-west-2:180477243137:rule/origination_model_cards_model_quality,Fires a Model Quality Job every month on the first day,ENABLED
+orq-mod-creation-prod,cron(00 20 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/orq-mod-creation-prod,Product mode to push events of data_creation into SQS,ENABLED
+orq-mod-send-prod,cron(30 20 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/orq-mod-send-prod,Product mode to push events of send_comms into SQS,ENABLED
+payment-agreement-processor-execute-conv-bau-evaluation-prod,"cron(20 17 ? * MON,TUE,WED,THU,FRI *)",arn:aws:events:us-west-2:180477243137:rule/payment-agreement-processor-execute-conv-bau-evaluation-prod,Schedule payment-agreement-processor to execute from monday to friday at 11:20pm to evaluate Collections BAU Agreement,ENABLED
+payment-agreement-processor-execute-promise-card-prod,cron(5 17 ? * * *),arn:aws:events:us-west-2:180477243137:rule/payment-agreement-processor-execute-promise-card-prod,Schedule payment-agreement-processor to execute all week at 11:05am to evaluate Cards Promises,ENABLED
+payment-agreement-processor-execute-promise-evaluation-prod,cron(0 17 ? * * *),arn:aws:events:us-west-2:180477243137:rule/payment-agreement-processor-execute-promise-evaluation-prod,Schedule payment-agreement-processor to execute all week at 11am to evaluate Loan Promises,ENABLED
+payment-agreement-processor-execute-promise-kopay-prod,cron(10 17 ? * * *),arn:aws:events:us-west-2:180477243137:rule/payment-agreement-processor-execute-promise-kopay-prod,Schedule payment-agreement-processor to execute all week at 11:10am to evaluate KoPay Promises,ENABLED
+payment-agreement-processor-kopay-no-break-prod,"cron(10/30 15,16 ? * * *)",arn:aws:events:us-west-2:180477243137:rule/payment-agreement-processor-kopay-no-break-prod,"Schedule payment-agreement-processor to execute all week at 9:10am, 9:40am, 10:10am, 10:40am to evaluate KoPay Promises",ENABLED
+payment-agreement-processor-playoff-promise-prod,cron(0 21 ? * * *),arn:aws:events:us-west-2:180477243137:rule/payment-agreement-processor-playoff-promise-prod,Schedule payment-agreement-processor to execute at 3pm playoff promises,ENABLED
+payment-agreement-processor-promise-no-break-promise-prod,"cron(0/30 15,16 ? * * *)",arn:aws:events:us-west-2:180477243137:rule/payment-agreement-processor-promise-no-break-promise-prod,"Schedule payment-agreement-processor to execute all week at 9am, 9:30am, 10am, 10:30am to evaluate Loan Promises",ENABLED
+payment-agreement-processor-promise_card-no-break-prod,"cron(5/30 15,16 ? * * *)",arn:aws:events:us-west-2:180477243137:rule/payment-agreement-processor-promise_card-no-break-prod,"Schedule payment-agreement-processor to execute all week at 9:05am, 9:35am, 10:05am, 10:35am to evaluate Card Promises",ENABLED
+platform-compliance-blacklists-fullscan,rate(1 hour),arn:aws:events:us-west-2:180477243137:rule/platform-compliance-blacklists-fullscan,"Rule that executes the blacklist lambda full scan, every hour",DISABLED
+platform-compliance-blacklists-fullscan-cnbv,rate(2 hours),arn:aws:events:us-west-2:180477243137:rule/platform-compliance-blacklists-fullscan-cnbv,CNBV black list scan,DISABLED
+platform-compliance-blacklists-list-update,cron(0 5 * * ? *),arn:aws:events:us-west-2:180477243137:rule/platform-compliance-blacklists-list-update,Function that updates the black lists,DISABLED
+push-notification-missing-bank-account-clabe-cron-event-dev,cron(0 13 * * ? *),arn:aws:events:us-west-2:180477243137:rule/push-notification-missing-bank-account-clabe-cron-event-dev,Schedule push-notification-missing-bank-account-clabe function,ENABLED
+push-notification-missing-bank-account-clabe-cron-event-prod,cron(0 20 * * ? *),arn:aws:events:us-west-2:180477243137:rule/push-notification-missing-bank-account-clabe-cron-event-prod,Schedule push-notification-missing-bank-account-clabe function,ENABLED
+reconciliation-runner-natural-stp-orders-cron-event-prod,cron(00 10 ? * TUE-MON *),arn:aws:events:us-west-2:180477243137:rule/reconciliation-runner-natural-stp-orders-cron-event-prod,Schedule get_natural_stp_orders function,ENABLED
+reconciliation-runner-operational-stp-orders-cron-event-dev,cron(50 16 ? * TUE-SAT *),arn:aws:events:us-west-2:180477243137:rule/reconciliation-runner-operational-stp-orders-cron-event-dev,Schedule get_operational_stp_orders function,ENABLED
+reconciliation-runner-operational-stp-orders-cron-event-prod,cron(30 2 ? * TUE-SAT *),arn:aws:events:us-west-2:180477243137:rule/reconciliation-runner-operational-stp-orders-cron-event-prod,Schedule get_operational_stp_orders function,ENABLED
+rem-trigger-schedule-switcher-disabler-cron-event-dev,cron(0 12 1 1 ? 2022),arn:aws:events:us-west-2:180477243137:rule/rem-trigger-schedule-switcher-disabler-cron-event-dev,Schedule rem-trigger-schedule-switcher function to disable REM offers trigger,ENABLED
+rem-trigger-schedule-switcher-disabler-cron-event-prod,cron(0 0 ? * TUE-SAT *),arn:aws:events:us-west-2:180477243137:rule/rem-trigger-schedule-switcher-disabler-cron-event-prod,Schedule rem-trigger-schedule-switcher function to disable REM offers trigger,ENABLED
+rem-trigger-schedule-switcher-enabler-cron-event-dev,cron(0 12 1 1 ? 2022),arn:aws:events:us-west-2:180477243137:rule/rem-trigger-schedule-switcher-enabler-cron-event-dev,Schedule rem-trigger-schedule-switcher function to enable REM offers trigger,ENABLED
+rem-trigger-schedule-switcher-enabler-cron-event-prod,cron(0 15 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/rem-trigger-schedule-switcher-enabler-cron-event-prod,Schedule rem-trigger-schedule-switcher function to enable REM offers trigger,ENABLED
+rem-whatsapp-notifier,cron(0 17 ? * 3-6 *),arn:aws:events:us-west-2:180477243137:rule/rem-whatsapp-notifier,Runs a lambda for notify users of Rem if approved martes-viernes,DISABLED
+rem-whatsapp-notifier-2,cron(0 17 ? * 2 *),arn:aws:events:us-west-2:180477243137:rule/rem-whatsapp-notifier-2,Runs a lambda for notify users of Rem if approved lunes,DISABLED
+resume-rem-cards-monday-cron-event-prod,cron(0 15 ? * 2 *),arn:aws:events:us-west-2:180477243137:rule/resume-rem-cards-monday-cron-event-prod,Schedule resume-rem-cards-temp function on mondays,ENABLED
+resume-rem-cards-week-cron-event-prod,cron(0 15 ? * 3-6 *),arn:aws:events:us-west-2:180477243137:rule/resume-rem-cards-week-cron-event-prod,Schedule resume-rem-cards-temp function all days,ENABLED
+salesforce-core-login-prod,rate(3 hours),arn:aws:events:us-west-2:180477243137:rule/salesforce-core-login-prod,Save the cookie in SF,ENABLED
+salesforce-ltv-cron-event-dev,cron(0 12 * * ? *),arn:aws:events:us-west-2:180477243137:rule/salesforce-ltv-cron-event-dev,Schedule salesforce-ltv function,ENABLED
+salesforce-ltv-cron-event-prod,cron(0 12 * * ? *),arn:aws:events:us-west-2:180477243137:rule/salesforce-ltv-cron-event-prod,Schedule salesforce-ltv function,ENABLED
+schedule-execution,cron(35 12 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/schedule-execution,every day at 07:35 invoke product-email-notification lambda,ENABLED
+schedule-execution-advisory-notification-7-mon,cron(00 13 ? * MON *),arn:aws:events:us-west-2:180477243137:rule/schedule-execution-advisory-notification-7-mon,every day at 07:00 invoke advisory-notification lambda,DISABLED
+schedule-execution-advisory-notification-7-wed,cron(00 13 ? * WED *),arn:aws:events:us-west-2:180477243137:rule/schedule-execution-advisory-notification-7-wed,every day at 07:00 invoke advisory-notification lambda,DISABLED
+schedule-execution-kams,cron(30 16 ? * MON-FRI *),arn:aws:events:us-west-2:180477243137:rule/schedule-execution-kams,every day at 10:30 am invoke kams-slak-notification lambda,ENABLED
+search-cnbv-blocked-list,"cron(5 7,19 ? * * *)",arn:aws:events:us-west-2:180477243137:rule/search-cnbv-blocked-list,Schedule for CNBV lambda function,ENABLED
+search-sdn-blocked-list,cron(0 0/1 * * ? *),arn:aws:events:us-west-2:180477243137:rule/search-sdn-blocked-list,Schedule for SDN lambda function,ENABLED
+search-sdn-update-list,cron(0 5 * * ? *),arn:aws:events:us-west-2:180477243137:rule/search-sdn-update-list,Function that updates the black lists,ENABLED
+send-email-alert-prod,cron(0 2 ? * 1 *),arn:aws:events:us-west-2:180477243137:rule/send-email-alert-prod,Send the verification email,ENABLED
+send-email-with-statistics,cron(50 12 ? * MON *),arn:aws:events:us-west-2:180477243137:rule/send-email-with-statistics,Send email with the information of logs in the last 7 days,ENABLED
+send-login-reporter-for-product,cron(00 12 ? * MON *),arn:aws:events:us-west-2:180477243137:rule/send-login-reporter-for-product,Send login information from logs in the last 7 days to product,ENABLED
+sepomex_ongoing,cron(00 7 ? * * *),arn:aws:events:us-west-2:180477243137:rule/sepomex_ongoing,Lambda that executes every day at 1am to download the latest file of sepomex official website with the zip codes of mexico,ENABLED
+sepomex_ongoing_dev,cron(00 7 ? * * *),arn:aws:events:us-west-2:180477243137:rule/sepomex_ongoing_dev,"Env: DEV
+Lambda that executes every day at 1am to download the latest file of sepomex official website with the zip codes of mexico. ",ENABLED
+session-core-srpago-bank-account-cron-event-dev,cron(0/20 * * * ? *),arn:aws:events:us-west-2:180477243137:rule/session-core-srpago-bank-account-cron-event-dev,Schedule session-core-srpago-bank-account function,ENABLED
+session-core-srpago-bank-account-cron-event-prod,cron(0/20 * * * ? *),arn:aws:events:us-west-2:180477243137:rule/session-core-srpago-bank-account-cron-event-prod,Schedule session-core-srpago-bank-account function,ENABLED
+sf-async-apex-executions-cron-event-dev,cron(0 0/4 1/1 * ? *),arn:aws:events:us-west-2:180477243137:rule/sf-async-apex-executions-cron-event-dev,Invoke my lambda every 4 hours each day,ENABLED
+sf-async-apex-executions-cron-event-prod,cron(0 0/4 1/1 * ? *),arn:aws:events:us-west-2:180477243137:rule/sf-async-apex-executions-cron-event-prod,Invoke my lambda every 4 hours each day,ENABLED
+slack-notifications-channel-webhook-cron-event-dev,cron(0 13 * * ? *),arn:aws:events:us-west-2:180477243137:rule/slack-notifications-channel-webhook-cron-event-dev,Schedule slack-notifications-channel-webhook function,ENABLED
+slack-notifications-channel-webhook-cron-event-prod,cron(0 14 * * ? *),arn:aws:events:us-west-2:180477243137:rule/slack-notifications-channel-webhook-cron-event-prod,Schedule slack-notifications-channel-webhook function,ENABLED
+spei-job-cron-event-prod,cron(0 13 * * ? *),arn:aws:events:us-west-2:180477243137:rule/spei-job-cron-event-prod,Schedule spei-job function,ENABLED
+stp-disbursement-processor-banxico-cep-start-for-20-pm-prod,cron(0 2 ? * TUE-SAT *),arn:aws:events:us-west-2:180477243137:rule/stp-disbursement-processor-banxico-cep-start-for-20-pm-prod,Banxico cep day schedule start for 20 PM,ENABLED
+stp-disbursement-processor-banxico-cep-start-prod,"cron(0 16,22 ? * MON-FRI *)",arn:aws:events:us-west-2:180477243137:rule/stp-disbursement-processor-banxico-cep-start-prod,Banxico cep day schedule start,ENABLED
+stp-disbursement-processor-banxico-cutoff-prod,cron(20 00 ? * TUE-SAT *),arn:aws:events:us-west-2:180477243137:rule/stp-disbursement-processor-banxico-cutoff-prod,STP banxico cutoff process of queued orders,ENABLED
+tasks-manager-cron-event-dev,rate(1 hour),arn:aws:events:us-west-2:180477243137:rule/tasks-manager-cron-event-dev,Schedule tasks-manager function,ENABLED
+tasks-manager-cron-event-prod,rate(5 minutes),arn:aws:events:us-west-2:180477243137:rule/tasks-manager-cron-event-prod,Schedule tasks-manager function,ENABLED
+testRule,rate(1 minute),arn:aws:events:us-west-2:180477243137:rule/testRule,,DISABLED
+topup_queue,cron(0 0/6 * * ? *),arn:aws:events:us-west-2:180477243137:rule/topup_queue,,DISABLED
+topups-execution-monitoring-code-cron-event-prod,cron(0 14 ? * SUN *),arn:aws:events:us-west-2:180477243137:rule/topups-execution-monitoring-code-cron-event-prod,Schedule topups-execution-monitoring-code function,ENABLED
+trigger-manual-message-dev,cron(0 2 11 11 ? 2022),arn:aws:events:us-west-2:180477243137:rule/trigger-manual-message-dev,Trigger production of message for natural and company profiles improvement,ENABLED
+trigger-manual-message-prod,cron(0 2 ? * 7 *),arn:aws:events:us-west-2:180477243137:rule/trigger-manual-message-prod,Trigger production of message for natural and company profiles improvement,ENABLED
+update-platform-ops-statistics,cron(00 23 ? * FRI *),arn:aws:events:us-west-2:180477243137:rule/update-platform-ops-statistics,Upload report metrics of Platform Ops in the last 7 days,ENABLED
+validador_OMEGA_Prod,cron(0/60 * * * ? *),arn:aws:events:us-west-2:180477243137:rule/validador_OMEGA_Prod,validador OMEGA collection-products Prod,ENABLED
+vsssnapshot,cron(0/2 * * * ? *),arn:aws:events:us-west-2:180477243137:rule/vsssnapshot,,DISABLED

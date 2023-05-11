@@ -1,0 +1,15 @@
+{
+  "name": "nunjucks",
+  "version": "3.2.3",
+  "description": "backstage templates",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nunjucks": "^3.2.3"
+  }
+}
