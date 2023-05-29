@@ -1,16 +1,17 @@
-import boto3 
+import boto3
 from pprint import pprint
 from json import dumps
 
 dynamodb = boto3.resource(
                 'dynamodb',
-                endpoint_url="http://localhost:8000"
+                endpoint_url="http://localhost:8000",
+                region_name = 'us-west-2',
+                aws_access_key_id="RANDOM",
+                aws_secret_access_key="RANDOM",
             )
         
-table = dynamodb.Table('Schemas')
+table = dynamodb.Table('InventoryRoyalHolidayTest')
 response = table.scan()
 
 items = response['Items']
-with open('/Users/intern/projects/nogit/cognito/dynamo/schemas.txt',"w")as  f:
-    f.write(dumps(items))
 pprint(items)

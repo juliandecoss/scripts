@@ -2,16 +2,19 @@ import boto3
 
 
 dynamodb = boto3.resource(
-                            'dynamodb',
-                            endpoint_url="http://localhost:8000"
-                        )
+                    'dynamodb',
+                    endpoint_url="http://localhost:8000",
+                    region_name = 'us-west-2',
+                    aws_access_key_id="RANDOM",
+                    aws_secret_access_key="RANDOM",
+)
 
 # Create the DynamoDB table.
 table = dynamodb.create_table(
-    TableName='Schemas',
+    TableName='InventoryRoyalHolidayTest',
     KeySchema=[
         {
-            'AttributeName': 'SchemaConfluentId',
+            'AttributeName': 'RoomId',
             'KeyType': 'HASH'
         },
         {
@@ -21,7 +24,7 @@ table = dynamodb.create_table(
     ],
     AttributeDefinitions=[
         {
-            'AttributeName': 'SchemaConfluentId',
+            'AttributeName': 'RoomId',
             'AttributeType': 'S'
         },
         {
